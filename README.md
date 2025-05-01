@@ -29,19 +29,14 @@ A Python-based bot to fetch and process Discord profile pictures from discord ch
     cd Discord-PFP-Fetcher
     ```
 
-2. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Add your Discord bot token**:
+2. **Add your Discord bot token**:
     - Create a `token.txt` file in the project directory.
     - Add your bot token inside the file:
       ```
       YOUR_DISCORD_BOT_TOKEN
       ```
 
-4. **Configure channels and webhooks**:
+3. **Configure channels and webhooks**:
     - Edit the `profileChannels` dictionary in `main.py` with your channel IDs and webhook URLs.
 
 ---
@@ -78,13 +73,6 @@ The following Python libraries are required:
 - requests: For making HTTP requests.
 - asyncio: For asynchronous operations.
 - colorama: For colored terminal output.
-
-Install them using:
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## Error Handling
 

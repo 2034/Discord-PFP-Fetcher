@@ -1,11 +1,26 @@
 # Dependencies
+
 import os
 import sys
-import requests
 import asyncio
 import json
+import subprocess
+
+def managePackages():
+    packages_to_uninstall = ["discord","discord.py","py-cord","pycord","nextcord","discord.py-self","aiohttp"]
+    packages_to_install = ["discord.py-self","aiohttp","requests","colorama"]
+    for package in packages_to_uninstall:
+        subprocess.run([sys.executable, "-m", "pip", "uninstall", package, "-y"], check=True)
+    for package in packages_to_install:
+        subprocess.run([sys.executable, "-m", "pip", "install", package], check=True)
+
+managePackages()
+
+
 from discord.ext import commands
 from colorama import Fore
+import requests
+
 
 # Config
 debug = True # Set to False to disable debug output
